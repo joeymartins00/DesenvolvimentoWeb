@@ -12,8 +12,50 @@
 
 }
 
+h1{
+    color: #efa505;
+    filter: drop-shadow(5px 5px 5px black);
+    transition: 2s;
+    
+
+}
+
+h1:hover{
+    color:#fb5000;
+    transform: rotateY(180deg);
+
+}
+
 #logo{
     height: 200px;
+    position: relative;
+    top: 0;
+    animation: logoA 5s infinite;
+    
+}
+
+@keyframes logoA {
+    0%{
+        top: 0;
+    
+    }
+    25%{
+        top: -30px;
+        transform: rotateY(0deg);
+        transform: rotateZ(-360deg);
+    }
+    50%{
+        transform: rotateY(180deg);
+        top: -30px;
+
+    }
+
+
+    100%{
+        top: 0;
+
+
+    }
 }
 
 
@@ -30,8 +72,13 @@
 }
 
 body{
-    background-image: linear-gradient(90deg,#01050b,#4826ec,#655fc2,#70097e,#5944b1,#8b00ff,#630fb4,#3d00ff,#01050b);
-    font-family: fantasy
+    background-image: linear-gradient(.45deg,#01050b,#4826ec,#655fc2,#70097e,#5944b1,#8b00ff,#630fb4,#3d00ff,#01050b);
+    font-family: fantasy;
+    display:flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
     
     
 }
@@ -46,6 +93,12 @@ body{
 }
 
 .nav-menu{
+    height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    
     
 }
 
@@ -62,7 +115,105 @@ body{
 }
 
 
-.item{
-    list-style: none;
+    
+section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.area-cards{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    background-color:  #efa505;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.cards{
+    height: 90%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid black;
+
+}
+
+.img_produto{
+    width: 100%;
+    height: 350px;
+    transition: 0.7s;
     
 }
+.img_produto:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(5px 5px 5px black);
+}
+
+h3{
+    color: #000000;
+    font-size: 30px;
+}
+.form_cad{
+    height: 300px;
+    width: 300px;
+    background-color: #efa505;
+    align-items: center;
+    border-radius: 8px;
+    gap: 50px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+    animation: dark-to-light-background 0.3s ease-in-out;
+}
+.input_cad{
+    height: 30px;
+    width: 80%;
+    border-radius: 8px;
+}
+.submit_cad{
+    width: 150px;
+    height: 30px;
+    border-radius: 8px;
+    
+}
+
+.nav-menu .nav-menu{
+    position: absolute;
+
+}
+
+.lista2{
+    width: 200px;
+    height: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    transition: 0.7s;
+    
+}
+
+.item{
+    list-style: none;
+    transition: 0.7s;
+
+}
+
+.item:hover .lista2{
+    height: 100px;
+    
+}
+
+.item:hover{
+    transform: scale(1.2);
+}
+
