@@ -6,8 +6,8 @@
 }
 
 *{
-    margin: 0;
-    padding: 1;
+    margin: 0.5;
+    padding: 0;
     box-sizing: border-box;
 
 }
@@ -93,11 +93,13 @@ body{
 }
 
 .nav-menu{
-    height: 600px;
+    height: 400px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    background-color: #00000093;
+    border-radius: 20px;
     
     
 }
@@ -146,13 +148,13 @@ section{
 }
 
 .img_produto{
-    width: 100%;
+    width: 80%;
     height: 350px;
     transition: 0.7s;
     
 }
 .img_produto:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     filter: drop-shadow(5px 5px 5px black);
 }
 
@@ -170,8 +172,7 @@ h3{
     justify-content: center;
     display: flex;
     flex-direction: column;
-    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
-    animation: dark-to-light-background 0.3s ease-in-out;
+
 }
 .input_cad{
     height: 30px;
